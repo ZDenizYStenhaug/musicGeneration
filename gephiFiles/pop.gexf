@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-05-03">
+    <creator>NetworkX 2.8</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="R/0.5" label="R/0.5" />
+      <node id="E5/0.5" label="E5/0.5" />
+      <node id="G5/0.5" label="G5/0.5" />
+      <node id="G5/1.0" label="G5/1.0" />
+      <node id="D5/0.5" label="D5/0.5" />
+      <node id="C5/0.5" label="C5/0.5" />
+      <node id="D5/1.0" label="D5/1.0" />
+      <node id="A4/3.0" label="A4/3.0" />
+      <node id="R/4.0" label="R/4.0" />
+      <node id="R/3.0" label="R/3.0" />
+      <node id="E5/1.0" label="E5/1.0" />
+      <node id="A4/1.0" label="A4/1.0" />
+      <node id="R/2.0" label="R/2.0" />
+      <node id="G5/0.25" label="G5/0.25" />
+      <node id="G5/0.75" label="G5/0.75" />
+      <node id="A5/1.5" label="A5/1.5" />
+      <node id="C5/1.0" label="C5/1.0" />
+      <node id="C5/0.75" label="C5/0.75" />
+      <node id="D5/0.25" label="D5/0.25" />
+      <node id="G5/1.5" label="G5/1.5" />
+      <node id="A4/2.0" label="A4/2.0" />
+      <node id="R/1.0" label="R/1.0" />
+      <node id="A4/0.5" label="A4/0.5" />
+      <node id="G4/0.5" label="G4/0.5" />
+      <node id="D5/0.75" label="D5/0.75" />
+      <node id="F5/0.5" label="F5/0.5" />
+      <node id="E5/0.75" label="E5/0.75" />
+      <node id="E5/4.0" label="E5/4.0" />
+      <node id="E4/0.5" label="E4/0.5" />
+      <node id="E4/0.25" label="E4/0.25" />
+      <node id="D4/0.25" label="D4/0.25" />
+      <node id="C4/0.25" label="C4/0.25" />
+      <node id="F4/0.25" label="F4/0.25" />
+      <node id="F4/1.5" label="F4/1.5" />
+      <node id="D4/0.5" label="D4/0.5" />
+      <node id="A3/0.25" label="A3/0.25" />
+      <node id="E4/1.5" label="E4/1.5" />
+      <node id="R/0.25" label="R/0.25" />
+      <node id="G4/0.25" label="G4/0.25" />
+      <node id="F4/0.75" label="F4/0.75" />
+      <node id="D4/0.75" label="D4/0.75" />
+      <node id="C4/0.75" label="C4/0.75" />
+      <node id="C4/0.5" label="C4/0.5" />
+      <node id="A3/0.5" label="A3/0.5" />
+      <node id="B3/0.5" label="B3/0.5" />
+      <node id="B4/1.0" label="B4/1.0" />
+      <node id="G4/1.0" label="G4/1.0" />
+      <node id="B4/1.5" label="B4/1.5" />
+      <node id="F4/0.5" label="F4/0.5" />
+      <node id="E4/1.0" label="E4/1.0" />
+      <node id="A4/0.75" label="A4/0.75" />
+      <node id="A4/0.25" label="A4/0.25" />
+      <node id="D4/1.0" label="D4/1.0" />
+      <node id="E4/0.75" label="E4/0.75" />
+      <node id="C4/1.0" label="C4/1.0" />
+      <node id="G4/0.75" label="G4/0.75" />
+      <node id="G4/2.0" label="G4/2.0" />
+      <node id="C4/2.0" label="C4/2.0" />
+      <node id="C4/1.5" label="C4/1.5" />
+      <node id="D4/3.0" label="D4/3.0" />
+      <node id="F4/1.0" label="F4/1.0" />
+      <node id="A3/2.0" label="A3/2.0" />
+      <node id="C4/3.0" label="C4/3.0" />
+      <node id="G5/2.0" label="G5/2.0" />
+      <node id="E5/2.0" label="E5/2.0" />
+      <node id="C5/3.0" label="C5/3.0" />
+      <node id="F5/1.0" label="F5/1.0" />
+      <node id="C5/2.0" label="C5/2.0" />
+      <node id="D5/3.0" label="D5/3.0" />
+      <node id="C5/1.5" label="C5/1.5" />
+      <node id="F5/1.5" label="F5/1.5" />
+    </nodes>
+    <edges>
+      <edge source="R/0.5" target="E5/0.5" id="0" weight="4" />
+      <edge source="R/0.5" target="R/4.0" id="1" weight="1" />
+      <edge source="R/0.5" target="C5/0.5" id="2" weight="2" />
+      <edge source="R/0.5" target="R/1.0" id="3" weight="3" />
+      <edge source="R/0.5" target="G5/0.5" id="4" weight="2" />
+      <edge source="R/0.5" target="R/0.5" id="5" weight="1" />
+      <edge source="R/0.5" target="E4/0.5" id="6" weight="1" />
+      <edge source="R/0.5" target="D4/0.5" id="7" weight="1" />
+      <edge source="R/0.5" target="F4/0.5" id="8" weight="1" />
+      <edge source="R/0.5" target="C4/0.25" id="9" weight="1" />
+      <edge source="R/0.5" target="R/0.25" id="10" weight="2" />
+      <edge source="R/0.5" target="A3/0.25" id="11" weight="1" />
+      <edge source="R/0.5" target="G4/0.5" id="12" weight="1" />
+      <edge source="E5/0.5" target="G5/0.5" id="13" weight="3" />
+      <edge source="E5/0.5" target="D5/0.5" id="14" weight="6" />
+      <edge source="E5/0.5" target="E5/0.5" id="15" weight="5" />
+      <edge source="E5/0.5" target="E5/1.0" id="16" weight="3" />
+      <edge source="E5/0.5" target="R/0.5" id="17" weight="1" />
+      <edge source="E5/0.5" target="C5/0.5" id="18" weight="1" />
+      <edge source="E5/0.5" target="F5/0.5" id="19" weight="3" />
+      <edge source="E5/0.5" target="R/3.0" id="20" weight="1" />
+      <edge source="E5/0.5" target="D5/1.0" id="21" weight="2" />
+      <edge source="E5/0.5" target="C5/2.0" id="22" weight="1" />
+      <edge source="E5/0.5" target="F5/1.0" id="23" weight="1" />
+      <edge source="E5/0.5" target="F5/1.5" id="24" weight="1" />
+      <edge source="G5/0.5" target="G5/1.0" id="25" weight="4" />
+      <edge source="G5/0.5" target="G5/0.5" id="26" weight="2" />
+      <edge source="G5/0.5" target="G5/0.25" id="27" weight="1" />
+      <edge source="G5/0.5" target="F5/0.5" id="28" weight="2" />
+      <edge source="G5/0.5" target="E5/0.5" id="29" weight="1" />
+      <edge source="G5/0.5" target="G5/2.0" id="30" weight="1" />
+      <edge source="G5/1.0" target="E5/0.5" id="31" weight="2" />
+      <edge source="G5/1.0" target="G5/1.5" id="32" weight="2" />
+      <edge source="G5/1.0" target="G5/1.0" id="33" weight="4" />
+      <edge source="G5/1.0" target="F5/1.0" id="34" weight="1" />
+      <edge source="D5/0.5" target="C5/0.5" id="35" weight="13" />
+      <edge source="D5/0.5" target="D5/0.5" id="36" weight="8" />
+      <edge source="D5/0.5" target="R/0.5" id="37" weight="2" />
+      <edge source="D5/0.5" target="E5/4.0" id="38" weight="1" />
+      <edge source="D5/0.5" target="D5/3.0" id="39" weight="1" />
+      <edge source="C5/0.5" target="D5/1.0" id="40" weight="11" />
+      <edge source="C5/0.5" target="E5/0.5" id="41" weight="1" />
+      <edge source="C5/0.5" target="C5/1.0" id="42" weight="2" />
+      <edge source="C5/0.5" target="C5/0.5" id="43" weight="4" />
+      <edge source="C5/0.5" target="A4/0.5" id="44" weight="2" />
+      <edge source="C5/0.5" target="D5/0.5" id="45" weight="2" />
+      <edge source="C5/0.5" target="E5/0.75" id="46" weight="1" />
+      <edge source="C5/0.5" target="A4/0.25" id="47" weight="1" />
+      <edge source="D5/1.0" target="A4/3.0" id="48" weight="1" />
+      <edge source="D5/1.0" target="A4/1.0" id="49" weight="3" />
+      <edge source="D5/1.0" target="A4/2.0" id="50" weight="1" />
+      <edge source="D5/1.0" target="D5/0.5" id="51" weight="6" />
+      <edge source="D5/1.0" target="E5/0.5" id="52" weight="2" />
+      <edge source="D5/1.0" target="C5/3.0" id="53" weight="2" />
+      <edge source="D5/1.0" target="R/1.0" id="54" weight="1" />
+      <edge source="A4/3.0" target="R/4.0" id="55" weight="1" />
+      <edge source="R/4.0" target="R/3.0" id="56" weight="1" />
+      <edge source="R/4.0" target="R/2.0" id="57" weight="2" />
+      <edge source="R/4.0" target="R/4.0" id="58" weight="1" />
+      <edge source="R/4.0" target="D5/1.0" id="59" weight="1" />
+      <edge source="R/4.0" target="R/0.5" id="60" weight="1" />
+      <edge source="R/3.0" target="C5/0.5" id="61" weight="1" />
+      <edge source="R/3.0" target="C5/3.0" id="62" weight="1" />
+      <edge source="R/3.0" target="R/1.0" id="63" weight="1" />
+      <edge source="E5/1.0" target="E5/1.0" id="64" weight="2" />
+      <edge source="E5/1.0" target="E5/0.5" id="65" weight="2" />
+      <edge source="E5/1.0" target="G5/0.5" id="66" weight="1" />
+      <edge source="E5/1.0" target="R/1.0" id="67" weight="1" />
+      <edge source="E5/1.0" target="F5/0.5" id="68" weight="1" />
+      <edge source="E5/1.0" target="E5/2.0" id="69" weight="1" />
+      <edge source="A4/1.0" target="R/2.0" id="70" weight="1" />
+      <edge source="A4/1.0" target="C5/1.0" id="71" weight="1" />
+      <edge source="A4/1.0" target="R/0.5" id="72" weight="1" />
+      <edge source="A4/1.0" target="G4/0.5" id="73" weight="1" />
+      <edge source="R/2.0" target="R/4.0" id="74" weight="2" />
+      <edge source="R/2.0" target="R/0.5" id="75" weight="3" />
+      <edge source="R/2.0" target="R/2.0" id="76" weight="2" />
+      <edge source="R/2.0" target="A4/1.0" id="77" weight="1" />
+      <edge source="R/2.0" target="R/0.25" id="78" weight="1" />
+      <edge source="R/2.0" target="G4/1.0" id="79" weight="1" />
+      <edge source="R/2.0" target="C4/1.0" id="80" weight="1" />
+      <edge source="R/2.0" target="E5/0.5" id="81" weight="1" />
+      <edge source="G5/0.25" target="G5/0.75" id="82" weight="1" />
+      <edge source="G5/0.75" target="A5/1.5" id="83" weight="1" />
+      <edge source="A5/1.5" target="E5/0.5" id="84" weight="1" />
+      <edge source="C5/1.0" target="C5/0.75" id="85" weight="1" />
+      <edge source="C5/1.0" target="R/1.0" id="86" weight="1" />
+      <edge source="C5/1.0" target="D5/1.0" id="87" weight="1" />
+      <edge source="C5/1.0" target="D5/0.5" id="88" weight="1" />
+      <edge source="C5/1.0" target="B4/1.0" id="89" weight="1" />
+      <edge source="C5/1.0" target="C5/1.0" id="90" weight="4" />
+      <edge source="C5/1.0" target="C5/2.0" id="91" weight="1" />
+      <edge source="C5/1.0" target="C5/1.5" id="92" weight="1" />
+      <edge source="C5/0.75" target="D5/0.25" id="93" weight="1" />
+      <edge source="C5/0.75" target="D5/0.75" id="94" weight="1" />
+      <edge source="D5/0.25" target="E5/0.5" id="95" weight="1" />
+      <edge source="D5/0.25" target="C5/0.5" id="96" weight="1" />
+      <edge source="G5/1.5" target="E5/0.5" id="97" weight="1" />
+      <edge source="G5/1.5" target="G5/0.5" id="98" weight="1" />
+      <edge source="A4/2.0" target="R/4.0" id="99" weight="1" />
+      <edge source="R/1.0" target="R/2.0" id="100" weight="3" />
+      <edge source="R/1.0" target="R/1.0" id="101" weight="1" />
+      <edge source="R/1.0" target="R/0.5" id="102" weight="3" />
+      <edge source="R/1.0" target="R/0.25" id="103" weight="2" />
+      <edge source="R/1.0" target="E5/0.5" id="104" weight="1" />
+      <edge source="A4/0.5" target="G4/0.5" id="105" weight="3" />
+      <edge source="A4/0.5" target="G4/1.0" id="106" weight="1" />
+      <edge source="A4/0.5" target="B4/1.5" id="107" weight="1" />
+      <edge source="A4/0.5" target="A4/0.25" id="108" weight="1" />
+      <edge source="A4/0.5" target="G4/0.25" id="109" weight="2" />
+      <edge source="A4/0.5" target="A4/0.5" id="110" weight="1" />
+      <edge source="A4/0.5" target="E4/0.25" id="111" weight="1" />
+      <edge source="G4/0.5" target="C5/0.75" id="112" weight="1" />
+      <edge source="G4/0.5" target="C5/0.5" id="113" weight="2" />
+      <edge source="G4/0.5" target="C5/1.0" id="114" weight="1" />
+      <edge source="G4/0.5" target="A4/0.25" id="115" weight="2" />
+      <edge source="G4/0.5" target="E4/0.5" id="116" weight="1" />
+      <edge source="G4/0.5" target="F4/0.75" id="117" weight="1" />
+      <edge source="G4/0.5" target="G4/0.25" id="118" weight="1" />
+      <edge source="G4/0.5" target="G4/0.5" id="119" weight="2" />
+      <edge source="G4/0.5" target="G4/1.0" id="120" weight="1" />
+      <edge source="D5/0.75" target="D5/0.5" id="121" weight="1" />
+      <edge source="F5/0.5" target="G5/0.5" id="122" weight="1" />
+      <edge source="F5/0.5" target="G5/2.0" id="123" weight="2" />
+      <edge source="F5/0.5" target="E5/0.5" id="124" weight="3" />
+      <edge source="F5/0.5" target="E5/2.0" id="125" weight="1" />
+      <edge source="F5/0.5" target="E5/1.0" id="126" weight="1" />
+      <edge source="F5/0.5" target="G5/1.0" id="127" weight="1" />
+      <edge source="E5/0.75" target="D5/0.25" id="128" weight="1" />
+      <edge source="E5/4.0" target="E5/4.0" id="129" weight="1" />
+      <edge source="E5/4.0" target="R/0.5" id="130" weight="1" />
+      <edge source="E4/0.5" target="E4/0.5" id="131" weight="3" />
+      <edge source="E4/0.5" target="E4/0.25" id="132" weight="3" />
+      <edge source="E4/0.5" target="D4/0.5" id="133" weight="1" />
+      <edge source="E4/0.5" target="A4/0.5" id="134" weight="1" />
+      <edge source="E4/0.5" target="F4/0.5" id="135" weight="1" />
+      <edge source="E4/0.5" target="C4/2.0" id="136" weight="1" />
+      <edge source="E4/0.5" target="F4/1.0" id="137" weight="2" />
+      <edge source="E4/0.5" target="C4/0.5" id="138" weight="1" />
+      <edge source="E4/0.25" target="D4/0.25" id="139" weight="9" />
+      <edge source="E4/0.25" target="E4/0.25" id="140" weight="8" />
+      <edge source="E4/0.25" target="F4/0.25" id="141" weight="3" />
+      <edge source="E4/0.25" target="E4/1.5" id="142" weight="1" />
+      <edge source="E4/0.25" target="D4/0.75" id="143" weight="2" />
+      <edge source="E4/0.25" target="E4/1.0" id="144" weight="1" />
+      <edge source="E4/0.25" target="G4/0.5" id="145" weight="2" />
+      <edge source="E4/0.25" target="D4/1.0" id="146" weight="2" />
+      <edge source="E4/0.25" target="G4/0.75" id="147" weight="1" />
+      <edge source="D4/0.25" target="E4/0.5" id="148" weight="2" />
+      <edge source="D4/0.25" target="E4/0.25" id="149" weight="5" />
+      <edge source="D4/0.25" target="C4/0.25" id="150" weight="9" />
+      <edge source="D4/0.25" target="D4/0.25" id="151" weight="1" />
+      <edge source="D4/0.25" target="C4/0.75" id="152" weight="1" />
+      <edge source="D4/0.25" target="E4/1.0" id="153" weight="1" />
+      <edge source="C4/0.25" target="E4/0.25" id="154" weight="3" />
+      <edge source="C4/0.25" target="D4/0.25" id="155" weight="3" />
+      <edge source="C4/0.25" target="D4/0.5" id="156" weight="3" />
+      <edge source="C4/0.25" target="A3/0.25" id="157" weight="1" />
+      <edge source="C4/0.25" target="E4/0.5" id="158" weight="1" />
+      <edge source="C4/0.25" target="C4/0.5" id="159" weight="1" />
+      <edge source="C4/0.25" target="A4/0.75" id="160" weight="1" />
+      <edge source="C4/0.25" target="E4/0.75" id="161" weight="1" />
+      <edge source="C4/0.25" target="C4/0.25" id="162" weight="1" />
+      <edge source="C4/0.25" target="C4/0.75" id="163" weight="1" />
+      <edge source="F4/0.25" target="F4/1.5" id="164" weight="1" />
+      <edge source="F4/0.25" target="G4/0.25" id="165" weight="1" />
+      <edge source="F4/0.25" target="E4/0.25" id="166" weight="2" />
+      <edge source="F4/1.5" target="R/2.0" id="167" weight="1" />
+      <edge source="F4/1.5" target="E4/0.5" id="168" weight="1" />
+      <edge source="D4/0.5" target="D4/0.5" id="169" weight="2" />
+      <edge source="D4/0.5" target="D4/0.25" id="170" weight="3" />
+      <edge source="D4/0.5" target="C4/0.75" id="171" weight="1" />
+      <edge source="D4/0.5" target="A3/0.5" id="172" weight="1" />
+      <edge source="D4/0.5" target="C4/1.0" id="173" weight="1" />
+      <edge source="D4/0.5" target="E4/0.25" id="174" weight="1" />
+      <edge source="D4/0.5" target="D4/1.0" id="175" weight="1" />
+      <edge source="A3/0.25" target="D4/0.25" id="176" weight="1" />
+      <edge source="A3/0.25" target="A3/0.5" id="177" weight="1" />
+      <edge source="A3/0.25" target="C4/0.25" id="178" weight="2" />
+      <edge source="E4/1.5" target="R/2.0" id="179" weight="1" />
+      <edge source="R/0.25" target="D4/0.25" id="180" weight="1" />
+      <edge source="R/0.25" target="C4/0.25" id="181" weight="1" />
+      <edge source="R/0.25" target="R/1.0" id="182" weight="2" />
+      <edge source="R/0.25" target="A3/0.25" id="183" weight="2" />
+      <edge source="R/0.25" target="A4/0.5" id="184" weight="2" />
+      <edge source="R/0.25" target="R/0.5" id="185" weight="1" />
+      <edge source="G4/0.25" target="F4/0.75" id="186" weight="1" />
+      <edge source="G4/0.25" target="E4/0.25" id="187" weight="2" />
+      <edge source="G4/0.25" target="G4/0.25" id="188" weight="3" />
+      <edge source="G4/0.25" target="G4/0.5" id="189" weight="3" />
+      <edge source="G4/0.25" target="A4/0.5" id="190" weight="1" />
+      <edge source="F4/0.75" target="E4/0.25" id="191" weight="2" />
+      <edge source="D4/0.75" target="R/0.5" id="192" weight="2" />
+      <edge source="C4/0.75" target="D4/0.25" id="193" weight="1" />
+      <edge source="C4/0.75" target="C4/0.25" id="194" weight="1" />
+      <edge source="C4/0.75" target="R/0.25" id="195" weight="1" />
+      <edge source="C4/0.5" target="D4/0.5" id="196" weight="2" />
+      <edge source="C4/0.5" target="C4/1.0" id="197" weight="2" />
+      <edge source="C4/0.5" target="E4/0.5" id="198" weight="1" />
+      <edge source="A3/0.5" target="B3/0.5" id="199" weight="1" />
+      <edge source="A3/0.5" target="C4/0.25" id="200" weight="1" />
+      <edge source="A3/0.5" target="A3/0.5" id="201" weight="1" />
+      <edge source="A3/0.5" target="A3/2.0" id="202" weight="1" />
+      <edge source="B3/0.5" target="C5/1.0" id="203" weight="1" />
+      <edge source="B4/1.0" target="A4/0.5" id="204" weight="1" />
+      <edge source="G4/1.0" target="A4/0.5" id="205" weight="1" />
+      <edge source="G4/1.0" target="G4/2.0" id="206" weight="2" />
+      <edge source="G4/1.0" target="G4/1.0" id="207" weight="1" />
+      <edge source="G4/1.0" target="F4/1.5" id="208" weight="1" />
+      <edge source="B4/1.5" target="R/0.5" id="209" weight="1" />
+      <edge source="F4/0.5" target="F4/0.5" id="210" weight="6" />
+      <edge source="F4/0.5" target="F4/0.25" id="211" weight="1" />
+      <edge source="F4/0.5" target="E4/0.5" id="212" weight="2" />
+      <edge source="E4/1.0" target="R/0.5" id="213" weight="1" />
+      <edge source="E4/1.0" target="R/0.25" id="214" weight="1" />
+      <edge source="E4/1.0" target="D4/1.0" id="215" weight="1" />
+      <edge source="A4/0.75" target="G4/0.25" id="216" weight="1" />
+      <edge source="A4/0.25" target="E4/0.25" id="217" weight="2" />
+      <edge source="A4/0.25" target="G4/0.25" id="218" weight="2" />
+      <edge source="A4/0.25" target="A4/0.25" id="219" weight="1" />
+      <edge source="D4/1.0" target="R/0.25" id="220" weight="2" />
+      <edge source="D4/1.0" target="D4/3.0" id="221" weight="1" />
+      <edge source="D4/1.0" target="R/0.5" id="222" weight="1" />
+      <edge source="D4/1.0" target="C4/3.0" id="223" weight="1" />
+      <edge source="E4/0.75" target="D4/0.5" id="224" weight="1" />
+      <edge source="C4/1.0" target="R/0.5" id="225" weight="1" />
+      <edge source="C4/1.0" target="C4/1.0" id="226" weight="1" />
+      <edge source="C4/1.0" target="C4/1.5" id="227" weight="1" />
+      <edge source="C4/1.0" target="C4/0.5" id="228" weight="1" />
+      <edge source="C4/1.0" target="C4/2.0" id="229" weight="1" />
+      <edge source="G4/0.75" target="A4/0.5" id="230" weight="1" />
+      <edge source="G4/2.0" target="G4/1.0" id="231" weight="1" />
+      <edge source="G4/2.0" target="G4/2.0" id="232" weight="1" />
+      <edge source="G4/2.0" target="F4/0.5" id="233" weight="1" />
+      <edge source="C4/2.0" target="R/2.0" id="234" weight="1" />
+      <edge source="C4/2.0" target="A3/0.5" id="235" weight="1" />
+      <edge source="C4/1.5" target="C4/0.5" id="236" weight="1" />
+      <edge source="D4/3.0" target="D4/1.0" id="237" weight="1" />
+      <edge source="F4/1.0" target="E4/0.5" id="238" weight="1" />
+      <edge source="F4/1.0" target="E4/1.0" id="239" weight="1" />
+      <edge source="A3/2.0" target="C4/0.5" id="240" weight="1" />
+      <edge source="C4/3.0" target="R/2.0" id="241" weight="1" />
+      <edge source="G5/2.0" target="G5/0.5" id="242" weight="1" />
+      <edge source="G5/2.0" target="F5/0.5" id="243" weight="2" />
+      <edge source="E5/2.0" target="E5/0.5" id="244" weight="1" />
+      <edge source="E5/2.0" target="C5/1.0" id="245" weight="1" />
+      <edge source="C5/3.0" target="F5/0.5" id="246" weight="1" />
+      <edge source="C5/3.0" target="R/3.0" id="247" weight="1" />
+      <edge source="C5/3.0" target="C5/2.0" id="248" weight="1" />
+      <edge source="F5/1.0" target="E5/1.0" id="249" weight="2" />
+      <edge source="C5/2.0" target="C5/2.0" id="250" weight="1" />
+      <edge source="C5/2.0" target="C5/1.0" id="251" weight="1" />
+      <edge source="C5/2.0" target="D5/0.5" id="252" weight="1" />
+      <edge source="C5/2.0" target="R/1.0" id="253" weight="1" />
+      <edge source="D5/3.0" target="D5/1.0" id="254" weight="1" />
+      <edge source="C5/1.5" target="E5/0.5" id="255" weight="1" />
+      <edge source="F5/1.5" target="E5/0.5" id="256" weight="1" />
+    </edges>
+  </graph>
+</gexf>
