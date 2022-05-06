@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def create_network(fn_list):
     score = get_full_score(fn_list)
-    g = nx.DiGraph()
+    G = nx.DiGraph()
 
     nodeSet = []
     edgeSet = []
@@ -13,16 +13,18 @@ def create_network(fn_list):
     for note in score:
         note_label = get_note_label(note)
         if note_label not in nodeSet:
-            g.add_node(note_label)
+            G.add_node(note_label, inbound=1)
             nodeSet.append(note_label)
+        elif note_label in nodeSet:
+            G.nodes[note_label]['inbound'] += 1
         if prev is not None:
             if (prev, note_label) in edgeSet:
-                g[prev][note_label]['weight'] += 1
+                G[prev][note_label]['weight'] += 1
             else:
-                g.add_edge(prev, note_label, weight=1)
+                G.add_edge(prev, note_label, weight=1)
                 edgeSet.append((prev, note_label))
         prev = note_label
-    return g
+    return G
 
 
 def xml_to_list(xml):
@@ -57,7 +59,7 @@ def get_note_label(note):
     return note_label
 
 
-def draw_network(g, name):
-    nx.write_gexf(g, "gephiFiles/" + name + ".gexf")
-    nx.draw(g, with_labels=True)
+def draw_network(G, name):
+    nx.write_gexf(G, "gephiFiles/" + name + ".gexf")
+    nx.draw(G, with_labels=True)
     plt.show()
