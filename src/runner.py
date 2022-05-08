@@ -1,9 +1,13 @@
-import network_creation as nc
-import melody_generator as mg
+from src import network_creation as nc, melody_generator as mg
+from synthesizer import Writer, Synthesizer, Waveform
+import numpy as np
+
 
 def main():
     G = create_network_for_era()
-    mg.generate_melody(G, 16)
+    melody = mg.generate_melody(G, 16)
+    return melody
+
 
 def create_network_for_era():
     # pop
@@ -16,7 +20,4 @@ def create_network_for_era():
     return pop_g
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    main()
-
+main()

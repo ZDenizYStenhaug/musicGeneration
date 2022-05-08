@@ -1,23 +1,24 @@
 from time import sleep
 
-from synthesizer import Player, Synthesizer, Waveform
+from synthesizer import Writer, Synthesizer, Waveform
 import random
+import numpy as np
 
-# TODO: walk the graph function. Must return a list of labels of notes to play.
+
 def generate_melody(G, length):
     nodes_w_weights = dict(G.nodes(data="inbound"))
     first_note = get_first_note(nodes_w_weights)
+    melody_labels = [first_note]
 
-    melody = [first_note]
-
-    # edges_with_weights = G.edges.data("weight")
     adj_view = dict(G.adj)
     note = first_note
-    for i in range(16):
-        melody.append(note)
+
+    for i in range(length):
+        melody_labels.append(note)
         note = get_next_note(adj_view[note])
-    print(melody)
-    play_melody(melody)
+    save_melody(melody_labels)
+    print(melody_labels)
+    return melody_labels
 
 
 def get_next_note(neighbours):
@@ -37,17 +38,16 @@ def get_first_note(nodes_w_weights):
     return random.choices(nodes, weights=node_weights)[0]
 
 
-def play_melody(melody):
-    player = Player()
+def save_melody(melody_labels):
+    waves = []
+    writer = Writer()
     synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-    player.open_stream()
-
-    for label in melody:
-        print(label)
+    for label in melody_labels:
         labels = label.split("/")
-        note = [labels[0]]
+        note = [labels[0]][0]
         time = float(labels[1])
         if note[0] == 'R':
-            sleep(time)
+            waves.extend(synthesizer.generate_constant_wave(0, time))
         else:
-            player.play_wave(synthesizer.generate_chord(note, time))
+            waves.extend(synthesizer.generate_constant_wave(note, time))
+    writer.write_wave("./media/deneme.wav", np.array(waves))

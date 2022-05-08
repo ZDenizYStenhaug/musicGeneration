@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Muse</title>
-</head>
-<body>
-<h1>welcome to museapp</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome to MuseApp</h1>
+<p> sersly. welcome</p>
+
+{{ notes }}
+
+<!--
+<figure>
+    <figcaption>Listen to deneme:</figcaption>
+    <audio
+        controls
+        src="deneme.wav">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+-->
+
+{% endblock %}
