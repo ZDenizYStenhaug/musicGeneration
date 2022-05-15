@@ -1,5 +1,3 @@
-from time import sleep
-
 from synthesizer import Writer, Synthesizer, Waveform
 import random
 import numpy as np
@@ -16,8 +14,6 @@ def generate_melody(G, length):
     for i in range(length):
         melody_labels.append(note)
         note = get_next_note(adj_view[note])
-    save_melody(melody_labels)
-    print(melody_labels)
     return melody_labels
 
 
@@ -38,7 +34,7 @@ def get_first_note(nodes_w_weights):
     return random.choices(nodes, weights=node_weights)[0]
 
 
-def save_melody(melody_labels):
+def save_melody(melody_labels, path):
     waves = []
     writer = Writer()
     synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
@@ -50,4 +46,13 @@ def save_melody(melody_labels):
             waves.extend(synthesizer.generate_constant_wave(0, time))
         else:
             waves.extend(synthesizer.generate_constant_wave(note, time))
-    writer.write_wave("./media/deneme.wav", np.array(waves))
+    writer.write_wave(path, np.array(waves))
+
+def save_labels(melodies, folder_path):
+    path = folder_path + "melodies.txt"
+    with open(path, "w") as f:
+        for melody in melodies:
+            line = " "
+            line = line.join(melody)
+            f.write(line)
+            f.write("\n")

@@ -58,8 +58,9 @@ def get_note_label(note):
         note_label = note[0] + "/" + str(note[1])
     return note_label
 
+def read_from_gefx(path):
+    return nx.read_gexf(path)
 
-def draw_network(G, name):
-    nx.write_gexf(G, "gephiFiles/" + name + ".gexf")
-    nx.draw(G, with_labels=True)
-    plt.show()
+
+def save_network(G, name):
+    nx.write_gexf(G, "gexfFiles/" + name + ".gexf")
