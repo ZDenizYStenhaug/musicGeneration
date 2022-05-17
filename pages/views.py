@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 import src.runner as runner
-from .forms import ContactForm, GenreForm
+from .forms import ContactForm, GenreForm, RatingForm
 
 def home_view(request):
     context = {
@@ -10,18 +10,24 @@ def home_view(request):
     return render(request, 'home-page.html', context)
 
 
-def iteration_view(request):
+def iteration_view(request, genre):
     if request.method == 'POST':
-        form = GenreForm(request.POST)
+        form = RatingForm(request.POST)
         if form.is_valid():
-            selected_genre = form.cleaned_data['genre']
-            return render(request, 'iteration.html', {'genre': selected_genre})
+            ratings = [form.cleaned_data['rating1'],
+                       form.cleaned_data['rating2'],
+                       form.cleaned_data['rating3'],
+                       form.cleaned_data['rating4'],
+                       form.cleaned_data['rating5']]
+            print(ratings)
 
+    print(genre)
     context = {
         "notes": runner.main(),
-        "form": GenreForm()
+        "genre": genre,
+        "form": RatingForm()
     }
-    return render(request, 'home-page.html', context)
+    return render(request, 'iteration.html', context)
 
 
 def contact(request):

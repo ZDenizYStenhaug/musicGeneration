@@ -6,3 +6,4 @@ Pipfile
 db.sqlite3
 museapp/settings.py
 museapp/.env
+media

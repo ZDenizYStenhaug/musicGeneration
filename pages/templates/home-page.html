@@ -15,8 +15,7 @@
         <div class="card-body">
           <h5 class="card-title">Western Classical</h5>
           <p class="card-text">Generate melodies using the themes composed by Beethoven, Haydn and Mozart.</p>
-          <form method="post" action="/genre">
-            {% csrf_token %}
+          <form method="get" action="/genre/classical">
             {{form}}
             <input type="hidden" name="genre" value="classical">
             <button  class="btn btn-primary" type="submit">Start Playing</button>
@@ -30,8 +29,7 @@
         <div class="card-body">
           <h5 class="card-title">Western Romantic</h5>
           <p class="card-text">Generate melodies using timeless themes composed by Brahms, Chopin and Tchaikovsky. </p>
-          <form method="post" action="/genre">
-            {% csrf_token %}
+          <form method="get" action="/genre/romantic">
             {{form}}
             <input type="hidden" name="genre" value="romantic">
             <button  class="btn btn-primary" type="submit">Start Playing</button>
@@ -45,8 +43,7 @@
         <div class="card-body">
           <h5 class="card-title">Jazz Standards</h5>
           <p class="card-text">Generate melodies using 50's Jazz standards from Ellington, The Monk, and Porter.</p>
-          <form method="post" action="/genre">
-            {% csrf_token %}
+          <form method="get" action="/genre/jazz">
             {{form}}
             <input type="hidden" name="genre" value="jazz">
             <button  class="btn btn-primary" type="submit">Start Playing</button>
@@ -59,8 +56,7 @@
         <div class="card-body">
           <h5 class="card-title">Pop/Rock</h5>
           <p class="card-text">Generate melodies using modern pop rock tunes from Bruno Mars, Rihanna and Billy Joel.</p>
-          <form method="post" action="/genre">
-            {% csrf_token %}
+          <form method="post" action="/genre/pop">
             {{form}}
             <input type="hidden" name="genre" value="pop">
             <button  class="btn btn-primary" type="submit">Start Playing</button>
