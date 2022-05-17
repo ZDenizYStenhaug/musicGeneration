@@ -27,10 +27,8 @@ def get_next_note(neighbours):
 
 
 def get_first_note(nodes_w_weights):
-
     nodes = list(nodes_w_weights.keys())
     node_weights = list(nodes_w_weights.values())
-
     return random.choices(nodes, weights=node_weights)[0]
 
 
@@ -39,14 +37,18 @@ def save_melody(melody_labels, path):
     writer = Writer()
     synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
     for label in melody_labels:
-        labels = label.split("/")
+        labels = label.split("-")
         note = [labels[0]][0]
-        time = float(labels[1])
+        time = labels[1]
         if note[0] == 'R':
             waves.extend(synthesizer.generate_constant_wave(0, time))
         else:
+            if '/' in labels[1]:
+                operands = labels[1].split('/')
+                time = float(operands[0]) / float(operands[1])
             waves.extend(synthesizer.generate_constant_wave(note, time))
     writer.write_wave(path, np.array(waves))
+
 
 def save_labels(melodies, folder_path):
     path = folder_path + "melodies.txt"

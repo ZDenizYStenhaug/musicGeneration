@@ -2,9 +2,12 @@ from django.shortcuts import render, redirect
 import src.runner as runner
 from .forms import ContactForm, GenreForm, RatingForm
 
+
+ITERATION_NUM = 1
+
+
 def home_view(request):
     context = {
-        "notes": runner.main(),
         "form": GenreForm()
     }
     return render(request, 'home-page.html', context)
@@ -20,11 +23,14 @@ def iteration_view(request, genre):
                        form.cleaned_data['rating4'],
                        form.cleaned_data['rating5']]
             print(ratings)
-
+            global ITERATION_NUM
+            ITERATION_NUM += 1
+            print(ITERATION_NUM)
     print(genre)
     context = {
-        "notes": runner.main(),
+        "melodies_path": runner.create_melodies(genre, ITERATION_NUM),
         "genre": genre,
+        "iteration_num": ITERATION_NUM,
         "form": RatingForm()
     }
     return render(request, 'iteration.html', context)

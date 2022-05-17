@@ -53,9 +53,11 @@ def get_note_label(note):
     """input is in the form of [<name of note with octave>, <duration>]
        returns the label that will be used in the network representation."""
     if note[0] == -1:
-        note_label = "R/" + str(note[1])
+        note_label = "R-" + str(note[1])
     else:
-        note_label = note[0] + "/" + str(note[1])
+        if '-' in note[0]:
+            note[0] = note[0].replace('-', '')
+        note_label = note[0] + "-" + str(note[1])
     return note_label
 
 def read_from_gefx(path):

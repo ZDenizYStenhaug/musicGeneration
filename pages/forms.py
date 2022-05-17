@@ -8,11 +8,11 @@ class GenreForm(forms.Form):
 
 
 class RatingForm(forms.Form):
-    rating1 = forms.ChoiceField(choices=rating_choices)
-    rating2 = forms.ChoiceField(choices=rating_choices)
-    rating3 = forms.ChoiceField(choices=rating_choices)
-    rating4 = forms.ChoiceField(choices=rating_choices)
-    rating5 = forms.ChoiceField(choices=rating_choices)
+    rating1 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 1")
+    rating2 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 2")
+    rating3 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 3")
+    rating4 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 4")
+    rating5 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 5")
 
 
 class ContactForm(forms.Form):
