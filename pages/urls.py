@@ -6,7 +6,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.home_view),
-    path('form', views.contact),
     path('genre/<str:genre>', views.iteration_view)
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

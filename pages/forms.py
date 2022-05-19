@@ -13,11 +13,3 @@ class RatingForm(forms.Form):
     rating3 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 3")
     rating4 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 4")
     rating5 = forms.ChoiceField(choices=rating_choices, label="Rating for melody 5")
-
-
-class ContactForm(forms.Form):
-    name = forms.CharField()
-    email = forms.EmailField(label='e-mail')
-    category = forms.ChoiceField(choices=[('question', 'Question'), ('other', 'Other')])
-    subject = forms.CharField(required=False)
-    body = forms.CharField(widget=forms.Textarea)
