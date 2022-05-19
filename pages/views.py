@@ -22,10 +22,8 @@ def iteration_view(request, genre):
                        form.cleaned_data['rating3'],
                        form.cleaned_data['rating4'],
                        form.cleaned_data['rating5']]
-            print(ratings)
             global ITERATION_NUM
             ITERATION_NUM += 1
-            print(ITERATION_NUM)
     print(genre)
     context = {
         "melodies_path": runner.create_melodies(genre, ITERATION_NUM),

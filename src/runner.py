@@ -1,52 +1,51 @@
-from src import network_creation as nc, melody_generator as mg
+from src import melody_generator as mg
 import random
 import os.path
+from src.GraphGen import Graph
 
 
-def main():
-    G = create_network_for_genre("genre")
-    melodies = iteration(G, 1)
+def create_melodies(genre, iteration_num, ratings=[]):
+    original_G = Graph(genre=genre)
+    original_G.get_full_score_for_genre()
+    original_G.generate()
+
+    if iteration_num == 1:
+        return iteration(original_G.G, iteration_num)
+    else:
+        new_G = create_graph_for_iteration(iteration_num, ratings, original_G)
+        melodies_path = iteration(new_G.G, iteration_num)
+        return melodies_path
+
+
+def create_graph_for_iteration(iteration_num, ratings, original_G):
+    # chose the melodies from previous generation
+    previous_melodies_path = "./media/iteration-" + str(iteration_num - 1) + "/melodies.txt"
+    previous_melodies = read_melodies_from_file(previous_melodies_path)
+    chosen_melodies = []
+    for i in range(4):
+        selected_melody = random.choices(previous_melodies, weights=ratings)[0]
+        index = previous_melodies.index(selected_melody)
+        ratings.pop(index)
+        previous_melodies.pop(index)
+        chosen_melodies.append(selected_melody)
+    # add a new melody from the original graph
+    chosen_melodies.append(mg.generate_melody(original_G.G))
+    # create a new network from these melodies
+    all_melodies = []
+    for m in chosen_melodies:
+        all_melodies += m
+    newG = Graph(all_notes=all_melodies)
+    newG.generate()
+    return newG
+
+
+def read_melodies_from_file(path):
+    with open(path) as  f:
+        melodies = []
+        for line in f:
+            line = line[:-1]
+            melodies.append(line.split(" "))
     return melodies
-
-
-def create_melodies(genre, iteration_num):
-    G = create_network_for_genre(genre)
-    return iteration(G, iteration_num)
-
-
-def create_network_for_genre(genre):
-    if genre == 'classical':
-        clas1 = "./scoreData/classical/beethoven-pianoQuartetNo3.xml"
-        clas2 = "./scoreData/classical/haydn-hobXVI35.xml"
-        clas3 = "./scoreData/classical/mozart-k545-theme1.xml"
-        clas_list = [clas1, clas2, clas3]
-        clas_G = nc.create_network(clas_list)
-        nc.save_network(clas_G, genre)
-        return clas_G
-    elif genre == 'romantic':
-        rom1 = "./scoreData/romantic/brahms-op77.xml"
-        rom2 = "./scoreData/romantic/chopin-op33no2.xml"
-        rom3 = "./scoreData/romantic/tchaikovsky-op35.xml"
-        rom_list = [rom1, rom2, rom3]
-        rom_G = nc.create_network(rom_list)
-        nc.save_network(rom_G, genre)
-    elif genre == 'jazz':
-        jazz1 = "./scoreData/jazz/ellington-inASentimentalMood.xml"
-        jazz2 = "./scoreData/jazz/monk-straight,NoChaser.xml"
-        jazz3 = "./scoreData/jazz/monk-wellYouNeedn't.xml"
-        jazz4 = "./scoreData/jazz/porter-iLoveYou.xml"
-        jazz_list = [jazz1, jazz2, jazz3, jazz4]
-        jazz_G = nc.create_network(jazz_list)
-        nc.save_network(jazz_G, genre)
-        return jazz_G
-    # pop
-    pop1 = "./scoreData/pop/rihanna-stay.xml"
-    pop2 = "./scoreData/pop/brunoMars-whenIWasYourMan.xml"
-    pop3 = "./scoreData/pop/billyJoel-pianoMan.xml"
-    pop_list = [pop1, pop2, pop3]
-    pop_G = nc.create_network(pop_list)
-    nc.save_network(pop_G, genre)
-    return pop_G
 
 
 def iteration(G, iteration_num):
@@ -56,13 +55,13 @@ def iteration(G, iteration_num):
     if not os.path.isdir(folder_path):
         os.mkdir(folder_path)
     for i in range(5):
-        length = random.randint(16, 24)
-        melody = mg.generate_melody(G, length)
+        melody = mg.generate_melody(G)
         melodies.append(melody)
         path = folder_path + str((i + 1)) + ".wav"
-        mg.save_melody(melody, path)
+        mg.save_melody_as_wav(melody, path)
         melodies_path.append(path)
     mg.save_labels(melodies, folder_path)
     return melodies_path
 
 
+create_melodies("pop", 2, ratings=[3, 5, 8, 9, 1])

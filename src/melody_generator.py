@@ -3,7 +3,12 @@ import random
 import numpy as np
 
 
-def generate_melody(G, length):
+def generate_melody(G):
+    """
+    :param G: directed graph
+    :return: List of String that represents melody labels
+    """
+    length = random.randint(16, 24)
     nodes_w_weights = dict(G.nodes(data="inbound"))
     first_note = get_first_note(nodes_w_weights)
     melody_labels = [first_note]
@@ -32,7 +37,11 @@ def get_first_note(nodes_w_weights):
     return random.choices(nodes, weights=node_weights)[0]
 
 
-def save_melody(melody_labels, path):
+def save_melody_as_wav(melody_labels, path):
+    """
+    :param melody_labels: list of strings
+    :param path: the path to save the wav file
+    """
     waves = []
     writer = Writer()
     synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
@@ -40,6 +49,7 @@ def save_melody(melody_labels, path):
         labels = label.split("-")
         note = [labels[0]][0]
         time = labels[1]
+        print(label)
         if note[0] == 'R':
             waves.extend(synthesizer.generate_constant_wave(0, time))
         else:
@@ -51,6 +61,10 @@ def save_melody(melody_labels, path):
 
 
 def save_labels(melodies, folder_path):
+    """
+    :param melodies: list of lists of melody labels.
+    :param folder_path: the path to folder to save the melodies.txt file.
+    """
     path = folder_path + "melodies.txt"
     with open(path, "w") as f:
         for melody in melodies:
