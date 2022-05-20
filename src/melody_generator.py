@@ -49,13 +49,13 @@ def save_melody_as_wav(melody_labels, path):
         labels = label.split("-")
         note = [labels[0]][0]
         time = labels[1]
-        print(label)
         if note[0] == 'R':
             waves.extend(synthesizer.generate_constant_wave(0, time))
         else:
             if '/' in labels[1]:
                 operands = labels[1].split('/')
                 time = float(operands[0]) / float(operands[1])
+            print("time: " + str(time) + "  note: " + str(note))
             waves.extend(synthesizer.generate_constant_wave(note, time))
     writer.write_wave(path, np.array(waves))
 

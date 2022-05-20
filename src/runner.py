@@ -22,6 +22,7 @@ def create_graph_for_iteration(iteration_num, ratings, original_G):
     previous_melodies_path = "./media/iteration-" + str(iteration_num - 1) + "/melodies.txt"
     previous_melodies = read_melodies_from_file(previous_melodies_path)
     chosen_melodies = []
+    ratings = list(map(float, ratings))
     for i in range(4):
         selected_melody = random.choices(previous_melodies, weights=ratings)[0]
         index = previous_melodies.index(selected_melody)
@@ -40,7 +41,7 @@ def create_graph_for_iteration(iteration_num, ratings, original_G):
 
 
 def read_melodies_from_file(path):
-    with open(path) as  f:
+    with open(path) as f:
         melodies = []
         for line in f:
             line = line[:-1]
@@ -62,6 +63,3 @@ def iteration(G, iteration_num):
         melodies_path.append(path)
     mg.save_labels(melodies, folder_path)
     return melodies_path
-
-
-create_melodies("pop", 2, ratings=[3, 5, 8, 9, 1])
