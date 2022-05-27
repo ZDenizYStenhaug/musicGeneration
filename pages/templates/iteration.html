@@ -11,15 +11,23 @@
         <ul>
             {% for path in melodies_path %}
                 <li>
-                    Melody {{ forloop.counter }}:
-                    <figure style="margin-top: 10px;">
-                        <audio
-                            controls
-                            src={{path}}>
-                                Your browser does not support the
-                                <code>audio</code> element.
-                        </audio>
-                    </figure>
+                    <div class="row">
+                        <div class="col">
+                            Melody {{ forloop.counter }}:
+                            <figure style="margin-top: 10px;">
+                                <audio
+                                    controls
+                                    src={{path}}>
+                                        Your browser does not support the
+                                        <code>audio</code> element.
+                                </audio>
+                            </figure>
+                        </div>
+                        <div class="col" style="margin-top: 45px;">
+                            <a class="btn btn-outline-primary btn-sm" href="{{path}}">Download</a>
+                        </div>
+
+                    </div>
                 </li>
             {% endfor %}
         </ul>
@@ -40,11 +48,11 @@
                     </div>
                   {% endfor %}
                   <input type="hidden" name="itr" value="{{iteration_num}}">
-                  <button type="submit" action="" class="btn btn-outline-success btn-lg">Submit</button>
               </form>
           </div>
-
       </div>
+      <button type="submit" action="" class="btn btn-outline-success btn-lg btn-block">Submit</button>
+
   </div>
 </div>
 
