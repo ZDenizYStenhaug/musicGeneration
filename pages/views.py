@@ -22,10 +22,12 @@ def iteration_view(request, genre):
                        form.cleaned_data['rating3'],
                        form.cleaned_data['rating4'],
                        form.cleaned_data['rating5']]
+            itr = int(request.POST.get('itr'))
             global ITERATION_NUM
-            ITERATION_NUM += 1
+            ITERATION_NUM = itr + 1
             melodies_path = runner.create_melodies(genre, ITERATION_NUM, ratings=ratings)
     else:
+        ITERATION_NUM = 1
         melodies_path = runner.create_melodies(genre, ITERATION_NUM)
     context = {
         "melodies_path": melodies_path,
