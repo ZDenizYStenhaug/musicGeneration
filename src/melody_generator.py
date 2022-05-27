@@ -18,7 +18,11 @@ def generate_melody(G):
 
     for i in range(length):
         melody_labels.append(note)
-        note = get_next_note(adj_view[note])
+        neighbours = adj_view[note]
+        if len(neighbours) == 0:
+            note = get_first_note(nodes_w_weights)
+        else:
+            note = get_next_note(adj_view[note])
     return melody_labels
 
 
