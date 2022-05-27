@@ -5,6 +5,12 @@ from src.GraphGen import Graph
 
 
 def create_melodies(genre, iteration_num, ratings=[]):
+    """
+    :param genre: the genre of the melody to be produced. Can be 'Classical', 'Romantic', 'Jazz', 'Pop'.
+    :param iteration_num: the number of the iteration
+    :param ratings: a list of 5 ints
+    :return:
+    """
     original_G = Graph(genre=genre)
     original_G.get_full_score_for_genre()
     original_G.generate()
