@@ -2,6 +2,14 @@ from synthesizer import Writer, Synthesizer, Waveform
 import random
 import numpy as np
 
+UNCOMMON_NOTES = {
+    "E#": "F",
+    "B#": "C",
+    "F##": "G",
+    "Fb": "E",
+    "Cb": "B",
+    "Gb": "F#"
+}
 
 def generate_melody(G):
     """
@@ -51,7 +59,7 @@ def save_melody_as_wav(melody_labels, path):
     synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
     for label in melody_labels:
         labels = label.split("-")
-        note = [labels[0]][0]
+        note = format_note([labels[0]][0])
         time = labels[1]
         if note[0] == 'R':
             waves.extend(synthesizer.generate_constant_wave(0, time))
@@ -76,3 +84,15 @@ def save_labels(melodies, folder_path):
             line = line.join(melody)
             f.write(line)
             f.write("\n")
+
+def format_note(note):
+    """
+    formats uncommon notes such as E# or Fb
+    :param note: string representing a note.
+    :return: string. formatted note. (ex: E# -> F)
+    """
+    base, octave = note[:-1], note[-1]
+    if base not in UNCOMMON_NOTES:
+        return note
+    return UNCOMMON_NOTES[base] + octave
+
