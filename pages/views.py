@@ -36,3 +36,11 @@ def iteration_view(request, genre):
         "form": RatingForm()
     }
     return render(request, 'iteration.html', context)
+
+def landing(request):
+    return render(request, 'landing.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+

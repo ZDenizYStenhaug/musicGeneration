@@ -24,7 +24,7 @@
                             </figure>
                         </div>
                         <div class="col" style="margin-top: 45px;">
-                            <a class="btn btn-outline-primary btn-sm" href="{{path}}">Download</a>
+                            <a class="btn btn-outline-primary btn-sm" href="{{path}}" download>Download</a>
                         </div>
 
                     </div>
@@ -48,10 +48,11 @@
                     </div>
                   {% endfor %}
                   <input type="hidden" name="itr" value="{{iteration_num}}">
+                  <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
               </form>
           </div>
       </div>
-      <button type="submit" action="" class="btn btn-outline-success btn-lg btn-block">Submit</button>
+
 
   </div>
 </div>

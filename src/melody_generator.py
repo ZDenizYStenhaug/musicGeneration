@@ -6,6 +6,8 @@ UNCOMMON_NOTES = {
     "E#": "F",
     "B#": "C",
     "F##": "G",
+    'C##': 'D',
+    'G##': 'A',
     "Fb": "E",
     "Cb": "B",
     "Gb": "F#"
