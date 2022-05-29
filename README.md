@@ -17,7 +17,7 @@ for installation, the host system must have the following installed:
 
 4. Install the dependencies
 
-```install -r requirements.txt```
+```pip install -r requirements.txt```
 
 5. Start the server
 
