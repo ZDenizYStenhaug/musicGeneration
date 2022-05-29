@@ -69,7 +69,7 @@ def save_melody_as_wav(melody_labels, path):
             if '/' in labels[1]:
                 operands = labels[1].split('/')
                 time = float(operands[0]) / float(operands[1])
-            print("time: " + str(time) + "  note: " + str(note))
+            # print("time: " + str(time) + "  note: " + str(note))
             waves.extend(synthesizer.generate_constant_wave(note, time))
     writer.write_wave(path, np.array(waves))
 
