@@ -10,7 +10,6 @@ for installation, the host system must have the following installed:
 
 - Python3.10
 - pip
-- pipenv (also added to the environment variables)
 
 1. Clone the project from the main branch and go to the project directory.
 
