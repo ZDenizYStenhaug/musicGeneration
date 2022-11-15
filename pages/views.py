@@ -14,6 +14,7 @@ def home_view(request):
 
 
 def iteration_view(request, genre):
+    melodies_path = None
     if request.method == 'POST':
         form = RatingForm(request.POST)
         if form.is_valid():
@@ -26,7 +27,7 @@ def iteration_view(request, genre):
             global ITERATION_NUM
             ITERATION_NUM = itr + 1
             melodies_path = runner.create_melodies(genre, ITERATION_NUM, ratings=ratings)
-    else:
+    if melodies_path is None:
         ITERATION_NUM = 1
         melodies_path = runner.create_melodies(genre, ITERATION_NUM)
     context = {
