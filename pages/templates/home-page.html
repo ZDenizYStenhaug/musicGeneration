@@ -55,6 +55,7 @@
           <h5 class="card-title">Pop/Rock</h5>
           <p class="card-text">Generate melodies using modern pop rock tunes from Bruno Mars, Rihanna and Billy Joel.</p>
           <form method="post" action="/genre/pop">
+            {%csrf_token%}
             {{form}}
             <input type="hidden" name="genre" value="pop">
             <button  class="btn btn-primary" type="submit">Start Playing</button>
